@@ -1,0 +1,84 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. Todos os direitos reservados.
+
+Experimente a nova plataforma cruzada PowerShell https://aka.ms/pscore6
+
+PS C:\Users\ajiki> aws dynamodb scan  --table-name Heroes_Table --endpoint-url http://localhost:8000
+{
+    "Items": [
+        {
+            "name": {
+                "S": "Wonder Woman"
+            },
+            "films": {
+                "N": "59"
+            },
+            "id": {
+                "S": "1"
+            },
+            "universe": {
+                "S": "DC Comics"
+            }
+        },
+        {
+            "name": {
+                "S": "Superman"
+            },
+            "films": {
+                "N": "6"
+            },
+            "id": {
+                "S": "4"
+            },
+            "universe": {
+                "S": "DC Comics"
+            }
+        },
+        {
+            "name": {
+                "S": "Mystique"
+            },
+            "films": {
+                "N": "52"
+            },
+            "id": {
+                "S": "3"
+            },
+            "universe": {
+                "S": "Marvel"
+            }
+        },
+        {
+            "name": {
+                "S": "Wolverine"
+            },
+            "films": {
+                "N": "26"
+            },
+            "id": {
+                "S": "5"
+            },
+            "universe": {
+                "S": "Marvel"
+            }
+        },
+        {
+            "name": {
+                "S": "Jessica Jones"
+            },
+            "films": {
+                "N": "39"
+            },
+            "id": {
+                "S": "2"
+            },
+            "universe": {
+                "S": "Marvel"
+            }
+        }
+    ],
+    "Count": 5,
+    "ScannedCount": 5,
+    "ConsumedCapacity": null
+}
+-- Mais  --
