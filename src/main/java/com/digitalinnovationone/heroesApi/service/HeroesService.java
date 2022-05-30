@@ -16,25 +16,26 @@ public class HeroesService {
         this.heroesRepository = heroesRepository;
     }
 
-    public Flux<Heroes> findAll(){
+    public Flux<Heroes> findAll() {
 
         return Flux.fromIterable(this.heroesRepository.findAll());
     }
 
-    public Mono<Heroes> findByIdHero(String id){
+    public Mono<Heroes> findByIdHero(String id) {
 
-        return  Mono.justOrEmpty(this.heroesRepository.findById(id));
+        return Mono.justOrEmpty(this.heroesRepository.findById(id));
     }
 
-    public Mono<Heroes> save(Heroes heroes){
+    public Mono<Heroes> save(Heroes heroes) {
 
-        return  Mono.justOrEmpty(this.heroesRepository.save(heroes));
+        return Mono.justOrEmpty(this.heroesRepository.save(heroes));
     }
 
 
-    public void deleteByIdHero(String id) {
+    public Mono<Boolean> deleteByIdHero(String id) {
         heroesRepository.deleteById(id);
-        Mono.just(true);
-    }
+        return Mono.just(true);
 
+
+    }
 }

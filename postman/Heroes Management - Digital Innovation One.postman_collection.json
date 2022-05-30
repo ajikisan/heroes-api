@@ -1,109 +1,108 @@
 {
-	"info": {
-		"_postman_id": "a1f38dcf-30cb-4533-985a-cabe20515103",
-		"name": "Heroes Management - Digital Innovation One",
-		"description": "Development of Application Programming Interface for managing Heroes using Spring WebFlux together with Reactor library.  \nThe AWS DynamoDB database was used locally to store the data.",
-
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-	},
-	"item": [
-		{
-			"name": "Get All Heroes",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/heroes",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"heroes"
-					]
-				},
-				"description": "Demonstrates all the heroes of the universe."
-			},
-			"response": []
-		},
-		{
-			"name": "Get heroes by Id",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "formdata",
-					"formdata": []
-				},
-				"url": {
-					"raw": "http://localhost:8080/heroes/",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"heroes",
-						""
-					]
-				},
-				"description": "Shows the hero giving the ID number."
-			},
-			"response": []
-		},
-		{
-			"name": "Create new hero",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n\"id\":\"5\",\r\n\"name\":\"Flash\",\r\n\"universe\":\"DC Comics\",\r\n\"films\": 7\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:8080/heroes",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"heroes"
-					]
-				},
-				"description": "Hero creation."
-			},
-			"response": []
-		},
-		{
-			"name": "Delete hero by ID",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/heroes/3",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"heroes",
-						"3"
-					]
-				},
-				"description": "Hero Exclusion by ID Number."
-			},
-			"response": []
-		}
-	]
+  "info": {
+    "_postman_id": "a1f38dcf-30cb-4533-985a-cabe20515103",
+    "name": "Heroes Management - Digital Innovation One",
+    "description": "Development of Application Programming Interface for managing Heroes using Spring WebFlux together with Reactor library.  \nThe AWS DynamoDB database was used locally to store the data.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Heroes",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/heroes",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "heroes"
+          ]
+        },
+        "description": "Demonstrates all the heroes of the universe."
+      },
+      "response": []
+    },
+    {
+      "name": "Get heroes by Id",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": []
+        },
+        "url": {
+          "raw": "http://localhost:8080/heroes/",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "heroes",
+            ""
+          ]
+        },
+        "description": "Shows the hero giving the ID number."
+      },
+      "response": []
+    },
+    {
+      "name": "Create new hero",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"id\":\"5\",\r\n\"name\":\"Flash\",\r\n\"universe\":\"DC Comics\",\r\n\"films\": 7\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/heroes",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "heroes"
+          ]
+        },
+        "description": "Hero creation."
+      },
+      "response": []
+    },
+    {
+      "name": "Delete hero by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/heroes/3",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "heroes",
+            "3"
+          ]
+        },
+        "description": "Hero Exclusion by ID Number."
+      },
+      "response": []
+    }
+  ]
 }

@@ -22,7 +22,7 @@ import static com.digitalinnovationone.heroesApi.constants.HeroesConstant.REGION
 @Configuration
 @EnableDynamoDBRepositories
 public class HeroesTable {
-    public static void main(String[] args) throws NullPointerException {
+    public static void main(String[] args) throws Exception {
 
         AmazonDynamoDB client = AmazonDynamoDBClientBuilder.standard()
                 .withEndpointConfiguration(new AwsClientBuilder.EndpointConfiguration(ENDPOINT_DYNAMO, REGION_DYNAMO))
@@ -38,14 +38,14 @@ public class HeroesTable {
                     tableName,
                     Arrays.asList(new KeySchemaElement("id", KeyType.HASH)
                     ),
+
                     Arrays.asList(new AttributeDefinition("id", ScalarAttributeType.S)
                     ),
-                    new ProvisionedThroughput(5L, 5L));
+                    new ProvisionedThroughput(5L, 5l));
             table.waitForActive();
             System.out.println("Sucesso " + table.getDescription().getTableStatus());
 
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             System.out.println(e.getMessage());
             System.out.println("Não foi possível criar a tabela");
 

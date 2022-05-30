@@ -9,7 +9,6 @@ import com.amazonaws.services.dynamodbv2.document.PutItemOutcome;
 import com.amazonaws.services.dynamodbv2.document.Table;
 import org.springframework.stereotype.Component;
 
-
 import static com.digitalinnovationone.heroesApi.constants.HeroesConstant.ENDPOINT_DYNAMO;
 import static com.digitalinnovationone.heroesApi.constants.HeroesConstant.REGION_DYNAMO;
 
@@ -18,7 +17,7 @@ import static com.digitalinnovationone.heroesApi.constants.HeroesConstant.REGION
 @Component
 public class HeroesData {
 
-    public static void main(String[] args) throws  NullPointerException{
+    public static void main(String[] args) throws Exception {
 
         AmazonDynamoDB client = AmazonDynamoDBClientBuilder.standard()
                 .withEndpointConfiguration(new AwsClientBuilder.EndpointConfiguration(ENDPOINT_DYNAMO, REGION_DYNAMO))
@@ -28,31 +27,31 @@ public class HeroesData {
         Table table = dynamoDB.getTable("Heroes_Table");
 
         Item hero = new Item()
-                .withPrimaryKey("id", "1")
+                .withPrimaryKey("id", 1)
                 .withString("name", "Wonder Woman")
                 .withString("universe", "DC Comics")
                 .withNumber("films", 59);
 
         Item hero2 = new Item()
-                .withPrimaryKey("id", "2")
+                .withPrimaryKey("id", 2)
                 .withString("name", "Jessica Jones")
                 .withString("universe", "Marvel")
                 .withNumber("films", 39);
 
         Item hero3 = new Item()
-                .withPrimaryKey("id", "3")
+                .withPrimaryKey("id", 3)
                 .withString("name", "Mystique")
                 .withString("universe", "Marvel")
                 .withNumber("films", 52);
 
         Item hero4 = new Item()
-                .withPrimaryKey("id", "4")
+                .withPrimaryKey("id", 4)
                 .withString("name", "Superman")
                 .withString("universe", "DC Comics")
                 .withNumber("films", 6);
 
         Item hero5 = new Item()
-                .withPrimaryKey("id", "5")
+                .withPrimaryKey("id", 5)
                 .withString("name", "Wolverine")
                 .withString("universe", "Marvel")
                 .withNumber("films", 26);

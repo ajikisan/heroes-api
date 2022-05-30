@@ -25,7 +25,7 @@ public class DynamoConfig {
     private String amazonAWSSecretKey;
 
     @Bean
-    @Deprecated
+   // @Deprecated
     public AmazonDynamoDB amazonDynamoDB() {
         AmazonDynamoDB amazonDynamoDB
                 = new AmazonDynamoDBClient(amazonAWSCredentials());
@@ -42,7 +42,6 @@ public class DynamoConfig {
         return new BasicAWSCredentials(
                 amazonAWSAccessKey, amazonAWSSecretKey);
     }
-
 
 
 }

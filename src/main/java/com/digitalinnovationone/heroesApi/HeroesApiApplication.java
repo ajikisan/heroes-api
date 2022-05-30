@@ -9,9 +9,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @EnableDynamoDBRepositories
 public class HeroesApiApplication {
 
-	public static void main(String[] args) {
-				SpringApplication.run(HeroesApiApplication.class, args);
-				System.out.println("Super poderes com Webflux.");
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(HeroesApiApplication.class, args);
+        System.out.println("Super poderes com Webflux.");
+    }
 
 }

@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 @EnableScan
-public interface HeroesRepository extends CrudRepository<Heroes, String> {
+public interface HeroesRepository extends CrudRepository<Heroes,String> {
 
 }

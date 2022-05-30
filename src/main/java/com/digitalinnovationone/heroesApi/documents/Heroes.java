@@ -5,6 +5,7 @@ import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
 import org.springframework.data.annotation.Id;
 
+
 import lombok.Data;
 import lombok.Setter;
 import lombok.Getter;
@@ -18,11 +19,11 @@ import lombok.NoArgsConstructor;
 @DynamoDBTable(tableName = "Heroes_Table")
 
 public class Heroes {
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -42,29 +43,29 @@ public class Heroes {
         this.universe = universe;
     }
 
-    public Integer getFilms() {
+    public int getFilms() {
         return films;
     }
 
-    public void setFilms(Integer films) {
+    public void setFilms(int films) {
         this.films = films;
     }
 
     @Id
-    @DynamoDBHashKey (attributeName = "id")
-    private Integer id;
+    @DynamoDBHashKey(attributeName = "id")
+    private String id;
 
-    @DynamoDBAttribute (attributeName = "name")
+    @DynamoDBAttribute(attributeName = "name")
     private String name;
 
-    @DynamoDBAttribute (attributeName = "universe")
+    @DynamoDBAttribute(attributeName = "universe")
     private String universe;
 
-    @DynamoDBAttribute (attributeName = "films")
-    private Integer films;
+    @DynamoDBAttribute(attributeName = "films")
+    private int films;
 
 
-    public Heroes(Integer id, String name, String universe, Integer films) {
+    public Heroes(String id, String name, String universe, int films) {
         this.id = id;
         this.name = name;
         this.universe = universe;
